@@ -1,0 +1,21 @@
+# Prompt the user for the file name
+file_name = input("Please enter the file name: ")
+
+# Prompt the user for their name
+name = input("Please enter your name: ")
+
+# Prompt the user for their street address
+address = input("Please enter your street address: ")
+
+# Prompt the user for their phone number
+phone_number = input("Please enter your phone number: ")
+
+# Write user data to the file in a comma-separated format
+with open(file_name, 'w') as file:
+    file.write(f"{name},{address},{phone_number}\n")
+
+# Read and display the contents of the file
+with open(file_name, 'r') as file:
+    file_contents = file.read()
+    print("Contents of the file:")
+    print(file_contents) 
